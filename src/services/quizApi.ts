@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:3001';
+// In dev, proxy to the local Express server; in production (Vercel), use relative URL
+const API_BASE = import.meta.env.DEV ? 'http://localhost:3001' : '';
 
 export interface QuizQuestion {
   question: string;
