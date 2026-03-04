@@ -1,0 +1,115 @@
+// Continent centers for the Region Hint feature
+export const continentCenters: Record<string, { center: [number, number]; zoom: number }> = {
+  Africa: { center: [20, 0], zoom: 2.5 },
+  Asia: { center: [90, 30], zoom: 2.2 },
+  Europe: { center: [15, 50], zoom: 3.5 },
+  "North America": { center: [-100, 45], zoom: 2.2 },
+  "South America": { center: [-60, -15], zoom: 2.5 },
+  Oceania: { center: [140, -25], zoom: 3 },
+};
+
+// Map alpha-2 country codes → continent
+export const countryToContinent: Record<string, string> = {
+  // Africa
+  DZ: "Africa", AO: "Africa", BJ: "Africa", BW: "Africa", BF: "Africa",
+  BI: "Africa", CV: "Africa", CM: "Africa", CF: "Africa", TD: "Africa",
+  KM: "Africa", CG: "Africa", CD: "Africa", CI: "Africa", DJ: "Africa",
+  EG: "Africa", GQ: "Africa", ER: "Africa", SZ: "Africa", ET: "Africa",
+  GA: "Africa", GM: "Africa", GH: "Africa", GN: "Africa", GW: "Africa",
+  KE: "Africa", LS: "Africa", LR: "Africa", LY: "Africa", MG: "Africa",
+  MW: "Africa", ML: "Africa", MR: "Africa", MU: "Africa", MA: "Africa",
+  MZ: "Africa", NA: "Africa", NE: "Africa", NG: "Africa", RW: "Africa",
+  ST: "Africa", SN: "Africa", SC: "Africa", SL: "Africa", SO: "Africa",
+  ZA: "Africa", SS: "Africa", SD: "Africa", TZ: "Africa", TG: "Africa",
+  TN: "Africa", UG: "Africa", ZM: "Africa", ZW: "Africa", EH: "Africa",
+
+  // Asia
+  AF: "Asia", AM: "Asia", AZ: "Asia", BH: "Asia", BD: "Asia",
+  BT: "Asia", BN: "Asia", KH: "Asia", CN: "Asia", CY: "Asia",
+  GE: "Asia", IN: "Asia", ID: "Asia", IR: "Asia", IQ: "Asia",
+  IL: "Asia", JP: "Asia", JO: "Asia", KZ: "Asia", KW: "Asia",
+  KG: "Asia", LA: "Asia", LB: "Asia", MY: "Asia", MV: "Asia",
+  MN: "Asia", MM: "Asia", NP: "Asia", KP: "Asia", KR: "Asia",
+  OM: "Asia", PK: "Asia", PS: "Asia", PH: "Asia", QA: "Asia",
+  SA: "Asia", SG: "Asia", LK: "Asia", SY: "Asia", TW: "Asia",
+  TJ: "Asia", TH: "Asia", TL: "Asia", TR: "Asia", TM: "Asia",
+  AE: "Asia", UZ: "Asia", VN: "Asia", YE: "Asia",
+
+  // Europe
+  AL: "Europe", AD: "Europe", AT: "Europe", BY: "Europe", BE: "Europe",
+  BA: "Europe", BG: "Europe", HR: "Europe", CZ: "Europe", DK: "Europe",
+  EE: "Europe", FI: "Europe", FR: "Europe", DE: "Europe", GR: "Europe",
+  HU: "Europe", IS: "Europe", IE: "Europe", IT: "Europe", XK: "Europe",
+  LV: "Europe", LI: "Europe", LT: "Europe", LU: "Europe", MT: "Europe",
+  MD: "Europe", MC: "Europe", ME: "Europe", NL: "Europe", MK: "Europe",
+  NO: "Europe", PL: "Europe", PT: "Europe", RO: "Europe", RU: "Europe",
+  SM: "Europe", RS: "Europe", SK: "Europe", SI: "Europe", ES: "Europe",
+  SE: "Europe", CH: "Europe", UA: "Europe", GB: "Europe",
+
+  // North America
+  AG: "North America", BS: "North America", BB: "North America",
+  BZ: "North America", CA: "North America", CR: "North America",
+  CU: "North America", DM: "North America", DO: "North America",
+  SV: "North America", GD: "North America", GT: "North America",
+  HT: "North America", HN: "North America", JM: "North America",
+  MX: "North America", NI: "North America", PA: "North America",
+  KN: "North America", LC: "North America", VC: "North America",
+  TT: "North America", US: "North America",
+
+  // South America
+  AR: "South America", BO: "South America", BR: "South America",
+  CL: "South America", CO: "South America", EC: "South America",
+  GY: "South America", PY: "South America", PE: "South America",
+  SR: "South America", UY: "South America", VE: "South America",
+  GF: "South America",
+
+  // Oceania
+  AU: "Oceania", FJ: "Oceania", KI: "Oceania", MH: "Oceania",
+  FM: "Oceania", NR: "Oceania", NZ: "Oceania", PW: "Oceania",
+  PG: "Oceania", WS: "Oceania", SB: "Oceania", TO: "Oceania",
+  TV: "Oceania", VU: "Oceania", NC: "Oceania",
+};
+
+// Approximate center coordinates [lon, lat] for countries (used to zoom after reveal)
+export const countryCenters: Record<string, [number, number]> = {
+  AF: [67, 33], AL: [20, 41], DZ: [3, 28], AO: [18, -12], AR: [-64, -34],
+  AM: [45, 40], AU: [134, -25], AT: [14, 47], AZ: [50, 40], BS: [-77, 24],
+  BH: [50, 26], BD: [90, 24], BB: [-59, 13], BY: [28, 53], BE: [4, 51],
+  BZ: [-88, 17], BJ: [2, 9], BT: [90, 27], BO: [-65, -17], BA: [18, 44],
+  BW: [24, -22], BR: [-52, -10], BN: [115, 4], BG: [25, 43], BF: [-2, 12],
+  BI: [30, -3], KH: [105, 13], CM: [12, 6], CA: [-106, 56], CV: [-24, 16],
+  CF: [21, 7], TD: [19, 15], CL: [-71, -30], CN: [104, 35], CO: [-72, 4],
+  KM: [44, -12], CG: [16, -1], CD: [24, -3], CR: [-84, 10], CI: [-5, 7],
+  HR: [16, 45], CU: [-80, 22], CY: [33, 35], CZ: [15, 50], DK: [10, 56],
+  DJ: [43, 12], DM: [-61, 15], DO: [-70, 19], EC: [-78, -2], EG: [30, 27],
+  SV: [-89, 14], GQ: [10, 2], ER: [39, 15], EE: [26, 59], SZ: [31, -26],
+  ET: [40, 9], FJ: [178, -18], FI: [26, 64], FR: [2, 46], GA: [12, -1],
+  GM: [-16, 13], GE: [44, 42], DE: [10, 51], GH: [-2, 8], GR: [22, 39],
+  GD: [-62, 12], GT: [-90, 15], GN: [-10, 11], GW: [-15, 12], GY: [-59, 5],
+  HT: [-72, 19], HN: [-86, 15], HU: [20, 47], IS: [-19, 65], IN: [79, 21],
+  ID: [120, -5], IR: [53, 32], IQ: [44, 33], IE: [-8, 53], IL: [35, 31],
+  IT: [12, 43], JM: [-77, 18], JP: [138, 36], JO: [36, 31], KZ: [67, 48],
+  KE: [38, 0], KP: [127, 40], KR: [128, 36], KW: [48, 29], KG: [75, 41],
+  LA: [102, 18], LV: [25, 57], LB: [36, 34], LS: [29, -29], LR: [-10, 6],
+  LY: [17, 27], LI: [10, 47], LT: [24, 56], LU: [6, 50], MG: [47, -19],
+  MW: [34, -13], MY: [110, 4], MV: [73, 3], ML: [-4, 17], MT: [14, 36],
+  MR: [-10, 20], MU: [58, -20], MX: [-102, 23], MD: [29, 47], MC: [7, 44],
+  MN: [104, 47], ME: [19, 43], MA: [-5, 32], MZ: [35, -18], MM: [96, 22],
+  NA: [19, -22], NP: [84, 28], NL: [5, 52], NZ: [174, -41], NI: [-85, 13],
+  NE: [8, 16], NG: [8, 10], MK: [22, 41], NO: [9, 62], OM: [56, 21],
+  PK: [69, 30], PW: [135, 7], PS: [35, 32], PA: [-80, 9], PG: [147, -6],
+  PY: [-58, -23], PE: [-76, -10], PH: [122, 13], PL: [20, 52], PT: [-8, 40],
+  QA: [51, 25], RO: [25, 46], RU: [100, 60], RW: [30, -2], KN: [-63, 17],
+  LC: [-61, 14], VC: [-61, 13], WS: [-172, -14], SM: [12, 44], ST: [7, 0],
+  SA: [45, 24], SN: [-14, 14], RS: [21, 44], SC: [56, -5], SL: [-12, 8],
+  SG: [104, 1], SK: [20, 49], SI: [15, 46], SB: [160, -9], SO: [46, 6],
+  ZA: [25, -29], SS: [30, 7], ES: [-4, 40], LK: [81, 8], SD: [30, 15],
+  SR: [-56, 4], SE: [16, 62], CH: [8, 47], SY: [38, 35], TW: [121, 24],
+  TJ: [69, 39], TZ: [35, -6], TH: [101, 15], TL: [126, -9], TG: [1, 8],
+  TO: [-175, -21], TT: [-61, 10], TN: [9, 34], TR: [35, 39], TM: [59, 39],
+  UG: [32, 1], UA: [32, 49], AE: [54, 24], GB: [-2, 54], US: [-97, 38],
+  UY: [-56, -33], UZ: [65, 41], VU: [167, -16], VE: [-66, 7], VN: [106, 16],
+  YE: [48, 15], ZM: [28, -15], ZW: [30, -20], XK: [21, 43],
+  EH: [-13, 24], GF: [-53, 4], GL: [-42, 72], NC: [166, -22],
+  PR: [-66, 18],
+};
